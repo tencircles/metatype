@@ -11,13 +11,6 @@
     function getter (obj, key) {
         return (obj && obj[key]) ? obj[key] : void 0;
     }
-    function setter (value, obj, key, i, keys) {
-        if (typeof obj[key] === "undefined") {
-            obj[key] = +key === +key ? [] : {};
-        }
-        return i === keys.length - 1 ? (obj[key] = value) : obj[key];
-    }
-
     return {
         extend: function extend () {
             return [].reduce.call(arguments, Object.create, this);
