@@ -5,11 +5,12 @@ metatype is a simple bit of code for using objects and prototypes as if you were
 
 ## metatype.extend
 
-`metatype.extend([prototype1, prototype2, ...])`
+`metatype.extend(prototype1, prototype2, ...)`
 
 Creates a new object that inherits from the prototypes given as arguments.
 Accepts any number of prototypes. Prototypes should be formatted as an Object.create propertiesObject.
 For more info on propertiesObject and Object.create, see [this article on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create).
+Keep in mind that order is important, a value on prototype2 will override a value on prototype1 and so on.
 
 **IMPORTANT**
 
