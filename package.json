@@ -1,0 +1,26 @@
+{
+  "name": "metatype",
+  "version": "0.0.0",
+  "description": "a simple bit of code for using objects and prototypes as if you were writing javascript.",
+  "main": "metatype.js",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tencircles/metatype.git"
+  },
+  "keywords": [
+    "metatype",
+    "metatypejs",
+    "prototypes",
+    "objects",
+    "inheritance"
+  ],
+  "author": "chris coniglio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tencircles/metatype/issues"
+  },
+  "homepage": "https://github.com/tencircles/metatype"
+}
