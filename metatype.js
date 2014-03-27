@@ -31,9 +31,6 @@
                     obj[key] = +keys[0] === +keys[0] ? [] : {};
             }
             return !keys.length ? obj[key] = value : null;
-        },
-        has: function has (keys) {
-            return typeof this.get(keys) !== "undefined";
         }
     };
 });
