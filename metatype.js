@@ -1,9 +1,11 @@
 (function (definition) {
-    typeof define === "function" && define.amd ?
-    define(definition) :
-    typeof module !== "undefined" && module.exports ?
-    module.exports = definition() :
+  if (typeof define === "function" && define.amd) {
+    define(definition);
+  } else if (typeof module !== "undefined" && module.exports) {
+    module.exports = definition();
+  } else {
     this.metatype = definition();
+  }
 })(function () {
     function init (obj, args) {
         return (obj.init && obj.init.apply(obj, args)), obj;
@@ -21,8 +23,8 @@
         get: function get (keys) {
             return keys.split(/\./).reduce(getter, this);
         },
-        set: function set (keys, value) {
-            var keys = keys.split(/\./),
+        set: function set (keysString, value) {
+            var keys = keysString.split(/\./),
                 obj = this,
                 key;
 
